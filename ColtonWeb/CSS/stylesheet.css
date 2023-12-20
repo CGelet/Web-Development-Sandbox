@@ -1,18 +1,46 @@
-nav {
+.navbar {
   background-color: rgba(128, 128, 128, 0.45);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  height: 80px;
+  overflow: hidden;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.4s;
+}
+
+.logowrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 30px;
+  color: black;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.logo {
+  display: block;
+  height: 100%;
 }
 
 .nav-list {
+  float: right;
   list-style-type: none;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
-  height: 60px;
 }
 
 .nav-items {
-  height: 100%;
   display: inline;
   align-items: center;
   justify-content: center;
@@ -22,28 +50,33 @@ nav {
   display: flex;
   text-decoration: none;
   align-items: center;
-  text-align: center;
-  padding: 0px 20px;
-  height: 100%;
+  margin: 0px 20px;
   font-weight: 600;
   font-size: 20px;
   color: black;
   transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+}
+
+.nav-text::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  transform: translateX(-50%); /* Center the underline */
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: white;
+  transition: width 0.3s ease-out; /* Added transition for width */
 }
 
 .nav-text:hover {
-  background-color: rgba(128, 128, 128, 0.25);
+  background-color: rgba(var(gray), 0.25);
   color: white;
 }
 
-.nav-logo {
-  display: block;
-  height: 100%;
-}
-
-.logo {
-  display: block;
-  height: 100%;
+.nav-text:hover::after {
+  width: 100%;
 }
 
 body {
@@ -51,6 +84,8 @@ body {
   padding: 0%;
   font-family: Arial, Helvetica, sans-serif;
   background-image: url("../REF/Background.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
 } /*# sourceMappingURL=stylesheet.css.map */
