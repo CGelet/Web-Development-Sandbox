@@ -1,9 +1,35 @@
-.header1 {
-  color: #0d3297;
-  background-color: #081f5f;
+nav {
+  background-color: gray;
 }
 
-.header2 {
-  color: #081f5f;
-  background-color: #0d3297;
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+
+.nav-items {
+  padding: 0 10px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  display: block;
+  height: 80px;
+}
+
+.nav-img {
+  display: block;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
 }/*# sourceMappingURL=stylesheet.css.map */
