@@ -11,12 +11,18 @@ function scrollFunction() {
   }
 }
 
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("navbar");
-  if (x.className === "navbar") {
-    x.className += " responsive";
-  } else {
-    x.className = "navbar";
-  }
+function onClickOpen() {
+  var sidebarNav = document.getElementById("sidebar-nav");
+  sidebarNav.style.display = 'block';
+  setTimeout(function () {
+    sidebarNav.classList.add("active");
+  }, 10); // Adding a small delay for display to take effect
+}
+
+function onClickClose() {
+  var sidebarNav = document.getElementById("sidebar-nav");
+  sidebarNav.classList.remove("active");
+  setTimeout(function () {
+    sidebarNav.style.display = 'none';
+  }, 400); // Delaying hiding to allow for the transition to complete
 }

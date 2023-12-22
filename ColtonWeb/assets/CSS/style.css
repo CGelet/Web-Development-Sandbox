@@ -1,3 +1,14 @@
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../REF/Background.jpg");
+  background-size: cover, auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+}
+
 .navbar {
   background-color: rgba(128, 128, 128, 0.45);
   -webkit-backdrop-filter: blur(15px);
@@ -83,47 +94,73 @@
   width: 100%;
 }
 
-body {
-  margin: 0%;
-  padding: 0%;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url("../REF/Background.jpg");
-  background-size: cover, auto 100%;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-attachment: fixed;
-}
-
-.navbar .icon {
+#open-button {
   display: none;
-  margin-right: 20px;
-  font-size: 20px;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .nav-list .nav-items:not(:first-child) {
+@media (max-width: 800px) {
+  .navbar .nav-items:not(:first-child) {
     display: none;
   }
-  .navbar a.icon {
-    float: right;
+  #open-button {
     display: block;
-    color: black;
   }
 }
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
-  .navbar.responsive {
-    position: relative;
-  }
-  .navbar.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
+.sidebar-nav {
+  background-color: rgba(128, 128, 128, 0.45);
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(100%); /* Move off-screen */
+  height: 100vh;
+  width: 200px;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.6s ease; /* Transition the right property */
+}
+
+.sidebar-nav.active {
+  transform: translateX(0); /* Move on-screen */
+}
+
+.sidebar-nav::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1; /* Move the pseudo-element behind the sidebar content */
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+
+.sidebar-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar-list .nav-items {
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+.sidebar-list .icon {
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  color: black;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */

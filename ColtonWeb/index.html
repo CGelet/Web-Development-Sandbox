@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./assets/CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="./assets/REF/CGBlack2.png">
-    <script script src="./assets/JS/function.js"></script>
 </head>
 <body>
     <nav class="navbar" id="navbar">
@@ -17,7 +16,16 @@
             <li class="nav-items"><a class="nav-text" href="about.html">About</a></li>
             <li class="nav-items"><a class="nav-text" href="resume.html">Resume</a></li>
             <li class="nav-items"><a class="nav-text" href="Contact.html">Contact</a></li>
-            <li class="small-nav-items"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
+            <li class="nav-items" id="open-button"><a href="javascript:void(0);" class="nav-text" id="opentext" onclick="onClickOpen()"><i class="fa fa-bars"></i></a></li>
+        </ul>
+    </nav>
+    <nav class="sidebar-nav" id="sidebar-nav">
+        <ul class="sidebar-list">
+            <li id="close-button"><a href="javascript:void(0);" class="icon" onclick="onClickClose()"><i class="fa fa-times"></i></a></li>
+            <li class="nav-items"><a class="nav-text" href="index.html">Home</a></li>
+            <li class="nav-items"><a class="nav-text" href="about.html">About</a></li>
+            <li class="nav-items"><a class="nav-text" href="resume.html">Resume</a></li>
+            <li class="nav-items"><a class="nav-text" href="Contact.html">Contact</a></li>
         </ul>
     </nav>
 
@@ -83,6 +91,6 @@
     </div>
     
 
-
+    <script src="./assets/JS/function.js"></script>
 </body>
 </html>
