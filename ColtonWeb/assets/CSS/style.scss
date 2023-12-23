@@ -203,14 +203,14 @@ body {
 .hello-hdr {
   text-align: center;
   overflow: hidden;
-  font-size: $respweight;
+  font-size: min($respweight, 75px);
   margin: 0;
 }
 
 .name-hdr {
   text-align: center;
   overflow: hidden;
-  font-size: calc(1.625rem + 4.5vw);
+  font-size: min($respweight, 75px);
   margin: 0;
   font-weight: 700;
 }
