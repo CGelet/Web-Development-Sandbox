@@ -1,7 +1,7 @@
 $primary_1: #0d3297;
 $primary_2: #081f5f;
 $navbarclr: gray;
-
+$respweight: calc(1.625rem + 4.5vw);
 
 body {
   margin: 0%;
@@ -182,6 +182,37 @@ body {
 .content {
   margin-left: 1vh;
   margin-right: 1vh;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.hello-wrap {
+  background-color: rgba($navbarclr,.45);
+  backdrop-filter: blur(15px);
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 10px rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin-bottom: 2vh;
+  padding: 0vw 1vw;
+  width: auto;
+}
+
+.hello-hdr {
+  text-align: center;
+  overflow: hidden;
+  font-size: $respweight;
+  margin: 0;
+}
+
+.name-hdr {
+  text-align: center;
+  overflow: hidden;
+  font-size: calc(1.625rem + 4.5vw);
+  margin: 0;
+  font-weight: 700;
 }
 
 .info-wrap {
@@ -189,6 +220,7 @@ body {
   grid-template-columns: auto auto;
   display: inline-grid;
   justify-content: space-evenly;
+  row-gap: 2vh;
 }
 
 .info-cont {
@@ -228,6 +260,7 @@ body {
   .info-wrap {
     display: grid;
     grid-template-columns: auto;
+    place-content: center;
     gap: 2vh;
   }
 
