@@ -197,7 +197,7 @@ body {
   border-radius: 5px;
   margin-bottom: 2vh;
   padding: 0vw 1vw;
-  width: auto;
+  width: min(90vw, auto); // test
 }
 
 .hello-hdr {
