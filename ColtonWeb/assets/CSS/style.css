@@ -258,4 +258,17 @@ body {
   .info-cont {
     width: 80vw;
   }
+}
+.social-cont {
+  display: block;
+  background-color: rgba(128, 128, 128, 0.45);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  height: 10vh;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  grid-column: span 2;
 }/*# sourceMappingURL=style.css.map */
