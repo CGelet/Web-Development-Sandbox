@@ -246,6 +246,25 @@ body {
   box-shadow: -10px 0 10px rgba(0,0,0,.1);
 }
 
+.break-bar {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(white, .7);
+	font-size: 16px;
+	margin: 8px 0px;
+  justify-content: space-around;
+}
+
+.break-bar-text::after,
+.break-bar-text::before {
+	content: "";
+	background-color: rgba(white, .7);
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 16px;
+}
 .body-text {
   text-align: left;
   margin-top: 1%;
